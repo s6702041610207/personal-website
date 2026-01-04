@@ -1,4 +1,3 @@
-/* ================= GLOBAL ================= */
 html {
     scroll-behavior: smooth;
 }
@@ -12,9 +11,6 @@ body {
 .section.light {
     background: transparent;
 }
-
-/* ================= SITE HEADER ================= */
-
 .site-header {
     position: fixed;
     top: 24px;
@@ -29,8 +25,6 @@ body {
 
     z-index: 50;
 }
-
-/* LEFT TEXT */
 .site-title {
     font-family: 'Playfair Display', serif;
     font-size: 18px;
@@ -65,7 +59,7 @@ body {
     transform: translateY(-3px) scale(1.15);
 }
 
-/* ================= HOME ================= */
+
 .home-bg {
     min-height: 100vh;
     background: url("../images/cover.jpg") center / cover no-repeat;
@@ -127,7 +121,7 @@ body {
     75% { content: "..."; }
 }
 
-/* ================= BASE SECTION ================= */
+
 .section {
     min-height: 100vh;
     padding: 120px 20px 80px;
@@ -167,7 +161,7 @@ body {
     transform: translateY(0);
 }
 
-/* ===== IMAGE ===== */
+
 .profile-image img {
     width: 250px;
     height: 340px;
@@ -184,13 +178,13 @@ body {
     box-shadow: 0 32px 70px rgba(0,0,0,0.24);
 }
 
-/* ===== CONTENT ===== */
+
 .profile-content {
     flex: 1;
     text-align: left;
 }
 
-/* ABOUT ME TITLE */
+
 .profile-content h2 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
@@ -199,7 +193,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* subtitle ใต้ About Me */
+
 .profile-content .about-subtitle {
     font-size: 14px;
     letter-spacing: 1.2px;
@@ -208,7 +202,7 @@ body {
     margin-bottom: 28px;
 }
 
-/* ===== META INFO ===== */
+
 .profile-meta {
     list-style: none;
     padding: 0;
@@ -228,7 +222,7 @@ body {
     color: #8a6f5a;
 }
 
-/* ===== STORY TEXT ===== */
+
 .profile-content p {
     font-size: 15px;
     line-height: 1.95;
@@ -236,7 +230,7 @@ body {
     margin-bottom: 18px;
     max-width: 520px;
 }
-/* ================= EDUCATION INTERACTION ================= */
+
 
 .timeline {
     position: relative;
@@ -244,7 +238,7 @@ body {
     padding-left: 50px;
 }
 
-/* animated vertical line */
+
 .timeline::before {
     content: "";
     position: absolute;
@@ -260,7 +254,7 @@ body {
     height: 100%;
 }
 
-/* timeline items */
+
 .timeline-item {
     position: relative;
     margin-bottom: 80px;
@@ -269,7 +263,7 @@ body {
     align-items: flex-start;
 }
 
-/* dot */
+
 .timeline-item::before {
     content: "";
     position: absolute;
@@ -281,14 +275,14 @@ body {
     border-radius: 50%;
 }
 
-/* logo */
+
 .edu-logo img {
     width: 60px;
     filter: grayscale(100%);
     transition: filter 0.6s ease;
 }
 
-/* card */
+
 .edu-card {
     background: rgba(255,255,255,0.6);
     padding: 30px 34px;
@@ -300,12 +294,12 @@ body {
     transition: all 0.8s ease;
 }
 
-/* alternate direction */
+
 .timeline-item:nth-child(even) .edu-card {
     transform: translateX(40px);
 }
 
-/* in view */
+
 .timeline-item.reveal.in-view .edu-card {
     opacity: 1;
     transform: translateX(0);
@@ -316,7 +310,7 @@ body {
 }
 
 
-/* ACTIVITIES */
+
 .activities-card {
     background:#fff;
     padding:60px;
@@ -362,7 +356,7 @@ body {
     border-radius:14px;
 }
 
-/* REVEAL EFFECT */
+
 .reveal {
     opacity:0;
     transform:translateY(40px);
@@ -373,7 +367,7 @@ body {
     transform:none;
 }
 
-/* DOTS */
+
 .dots::after {
     content:"";
     animation:dots 1.6s steps(4,end) infinite;
@@ -386,28 +380,19 @@ body {
 }
 
 
-
-
-
-
-
-
-/* Scroll-based movement */
 .home-text {
     transform: translateY(40px);
     opacity: 0;
     transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
-/* เมื่อ section อยู่ใน viewport */
+
 .home-bg.in-view .home-text {
     transform: translateY(0);
     opacity: 1;
 }
 
 
-
-/* ================= PROFILE STORY BLOCKS ================= */
 
 .profile-image img {
     width: 240px;
@@ -420,7 +405,7 @@ body {
     flex: 1;
 }
 
-/* story blocks */
+
 .story-block {
     margin-top: 36px;
 }
@@ -438,7 +423,7 @@ body {
     opacity: 0.85;
 }
 
-/* block with image */
+
 .story-block.with-image {
     display: flex;
     gap: 28px;
@@ -451,7 +436,7 @@ body {
     object-fit: cover;
 }
 
-/* responsive */
+
 @media (max-width: 768px) {
     .profile-card {
         flex-direction: column;
@@ -467,11 +452,6 @@ body {
         max-width: 260px;
     }
 }
-
-
-
-/* ================= ACTIVITIES SECTION ================= */
-
 .activities-section {
     background-color: #f1efe9;
 }
@@ -509,7 +489,7 @@ body {
     align-items: center;
 }
 
-/* TEXT SIDE */
+
 .activities-text-block {
     flex: 1;
 }
@@ -538,7 +518,7 @@ body {
     border-color: #2f2f2f;
 }
 
-/* ================= ACTIVITIES VISUAL (PHOTOS) ================= */
+
 
 .activities-visual {
     position: relative;
@@ -547,7 +527,6 @@ body {
     overflow: visible;
 }
 
-/* shared image style */
 .activities-visual img {
     width: 100%;
     height: 100%;
@@ -878,13 +857,13 @@ body {
     filter: brightness(100%);
 }
 
-/* ================= LINK ================= */
+
 
 .collection-external {
     display: inline-block;
     margin-top: 70px;
 
-    font-size: 14px;
+    font-size: 80px;
     letter-spacing: 0.4px;
     color: #000;
     text-decoration: none;
@@ -906,7 +885,7 @@ body {
     width: 100%;
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width: 1024px) {
     .collection-masonry {
@@ -942,7 +921,7 @@ body {
     transform: translateY(-4px) scale(1.15);
 }
 
-/* ================= COLLECTION LAYOUT ================= */
+
 
 .collection-wrapper {
     padding: 160px 8vw 120px;
@@ -966,7 +945,7 @@ body {
     opacity: 0.7;
 }
 
-/* ================= MASONRY ================= */
+
 
 .collection-masonry {
     column-count: 3;
@@ -988,7 +967,7 @@ body {
     transition: transform 0.6s ease, filter 0.4s ease;
 }
 
-/* Pinterest feeling */
+
 .collection-item.tall img { aspect-ratio: 2 / 3; }
 .collection-item.wide img { aspect-ratio: 3 / 2; }
 .collection-item img { aspect-ratio: 1 / 1; }
@@ -1094,4 +1073,16 @@ body {
 .footer-copy {
     font-size: 13px;
     opacity: 0.7;
+}
+.collection-page {
+    background-color: #e6c668;
+    background-image:
+        radial-gradient(rgba(102, 170, 133, 0.035) 1px, transparent 1px),
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.75),
+            rgba(255,255,255,0.35)
+        );
+    background-size: 22px 22px, 100% 100%;
+    background-attachment: fixed;
 }
