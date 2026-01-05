@@ -683,7 +683,7 @@ body {
     opacity: 0.6;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 900px) {
     .collection-grid {
         column-count: 2;
@@ -793,68 +793,129 @@ body {
 
 /* ================= HEADER ================= */
 
+/* ================= GALLERY PAGE ================= */
+
 .collection-page {
-    padding: 100px 60px 120px;
+    background-color: #e6c668;
+    background-image:
+        radial-gradient(rgba(102,170,133,0.035) 1px, transparent 1px),
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.75),
+            rgba(255,255,255,0.35)
+        );
+    background-size: 22px 22px, 100% 100%;
+    background-attachment: fixed;
 }
 
+/* Wrapper */
+.collection-wrapper {
+    padding: 160px 8vw 120px;
+}
+
+/* Header */
 .collection-header {
     max-width: 520px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-.collection-header h2 {
+.gallery-title {
     font-family: 'Playfair Display', serif;
-    font-size: 44px;
-    margin-bottom: 12px;
+    font-size: clamp(42px, 5vw, 56px);
+    font-weight: 400;
+    margin-bottom: 16px;
+    letter-spacing: 0.6px;
+    color: #2f2f2f;
+}
+
+.gallery-title span {
+    font-style: italic;
+    color: #dfb325;
+}
+
+.gallery-title::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 2px;
+    margin-top: 14px;
+    background: rgba(47,47,47,0.25);
 }
 
 .collection-header p {
     font-size: 15px;
-    line-height: 1.8;
-    color: #666;
+    line-height: 1.9;
+    opacity: 0.75;
 }
 
-/* ================= MASONRY GRID ================= */
+/* ================= MASONRY (Pinterest Feel) ================= */
 
 .collection-masonry {
     column-count: 3;
-    column-gap: 28px;
+    column-gap: 18px;
 }
 
 .collection-item {
     break-inside: avoid;
-    margin-bottom: 28px;
-    overflow: hidden;
+    margin-bottom: 18px;
     border-radius: 18px;
-    cursor: pointer;
+    overflow: hidden;
 }
 
 .collection-item img {
     width: 100%;
     display: block;
     object-fit: cover;
-
+    aspect-ratio: 1 / 1;
     filter: brightness(95%);
     transition: transform 0.6s ease, filter 0.4s ease;
 }
 
-/* Heights (ทำให้ไม่เท่ากันแบบ Pinterest) */
-.collection-item.tall img {
-    aspect-ratio: 2 / 3;
-}
+.collection-item.tall img { aspect-ratio: 2 / 3; }
+.collection-item.wide img { aspect-ratio: 3 / 2; }
 
-.collection-item.wide img {
-    aspect-ratio: 3 / 2;
-}
-
-.collection-item img {
-    aspect-ratio: 1 / 1;
-}
-
-/* Hover effect */
 .collection-item:hover img {
     transform: scale(1.08);
     filter: brightness(100%);
+}
+
+/* ================= PINTEREST LINK ================= */
+
+.collection-external {
+    display: inline-block;
+    margin-top: 70px;
+    padding: 14px 30px;
+
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    color: #2f2f2f;
+    border: 1.5px solid rgba(0,0,0,0.35);
+    border-radius: 40px;
+
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(6px);
+
+    transition: all 0.35s ease;
+}
+
+.collection-external:hover {
+    background: #fff;
+    border-color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .collection-masonry { column-count: 2; }
+}
+
+@media (max-width: 640px) {
+    .collection-wrapper { padding: 120px 24px; }
+    .collection-masonry { column-count: 1; }
 }
 
 
@@ -862,28 +923,34 @@ body {
 .collection-external {
     display: inline-block;
     margin-top: 70px;
+    padding: 14px 28px;
 
-    font-size: 80px;
-    letter-spacing: 0.4px;
-    color: #000;
+    font-size: 14px;
+    letter-spacing: 0.5px;
     text-decoration: none;
-    position: relative;
+
+    color: #2f2f2f;
+    border: 1.5px solid rgba(0,0,0,0.35);
+    border-radius: 40px;
+
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(4px);
+
+    transition: 
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.collection-external::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 1px;
-    background: #000;
-    transition: width 0.3s ease;
+
+.collection-external:hover {
+    background: #fff;
+    border-color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
-.collection-external:hover::after {
-    width: 100%;
-}
 
 
 
@@ -1085,4 +1152,55 @@ body {
         );
     background-size: 22px 22px, 100% 100%;
     background-attachment: fixed;
+}
+
+/* profile images stacked - fine tuning */
+.profile-images {
+    display: flex;
+    flex-direction: column;
+}
+
+/* รูปหลัก */
+.profile-image:first-child {
+    margin-bottom: 60px; /* เว้นระยะจากรูป turning point */
+}
+
+/* รูป turning point */
+.profile-image.sub-image {
+    margin-top: 40px; /* ดันลงให้อยู่ระดับเดียวกับเนื้อหา */
+}
+
+/* ปรับขนาดเล็กน้อย */
+.profile-image.sub-image img {
+    width: 210px;
+    height: auto;
+    opacity: 0.95;
+}
+
+/* ================= GALLERY TITLE ================= */
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 56px);
+    font-weight: 400;
+    margin-bottom: 24px;
+
+    color: #2f2f2f;
+    letter-spacing: 0.6px;
+}
+
+.gallery-title span {
+    font-style: italic;
+    color: #dfb325; /* โทนเดียวกับ site-title */
+}
+
+/* เส้นบางๆ ใต้หัวข้อ */
+.gallery-title::after {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 2px;
+    margin-top: 16px;
+
+    background: rgba(47,47,47,0.25);
 }
