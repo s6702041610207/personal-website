@@ -808,12 +808,12 @@ body {
     background-attachment: fixed;
 }
 
-/* Wrapper */
+
 .collection-wrapper {
     padding: 160px 8vw 120px;
 }
 
-/* Header */
+
 .collection-header {
     max-width: 520px;
     margin-bottom: 50px;
@@ -848,7 +848,7 @@ body {
     opacity: 0.75;
 }
 
-/* ================= MASONRY (Pinterest Feel) ================= */
+
 
 .collection-masonry {
     column-count: 3;
@@ -907,7 +907,7 @@ body {
     box-shadow: 0 14px 30px rgba(0,0,0,0.18);
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width: 1024px) {
     .collection-masonry { column-count: 2; }
@@ -971,13 +971,13 @@ body {
 }
 
 
-/* ================= COLLECTION PAGE ONLY ================= */
+
 
 .collection-page {
     background: #f9f9f9;
 }
 
-/* header icon ใหญ่ขึ้น */
+
 .collection-page .site-nav a {
     font-size: 28px;
     opacity: 0.75;
@@ -1044,7 +1044,7 @@ body {
     filter: brightness(100%);
 }
 
-/* ================= LINK ================= */
+
 
 .collection-external {
     display: inline-block;
@@ -1070,7 +1070,7 @@ body {
     width: 100%;
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width: 1024px) {
     .collection-masonry { column-count: 2; }
@@ -1084,7 +1084,7 @@ body {
 }
 
 
-/* ================= FOOTER ================= */
+
 
 .site-footer {
     width: 100%;
@@ -1154,30 +1154,30 @@ body {
     background-attachment: fixed;
 }
 
-/* profile images stacked - fine tuning */
+
 .profile-images {
     display: flex;
     flex-direction: column;
 }
 
-/* รูปหลัก */
+
 .profile-image:first-child {
-    margin-bottom: 60px; /* เว้นระยะจากรูป turning point */
+    margin-bottom: 60px; 
 }
 
-/* รูป turning point */
+
 .profile-image.sub-image {
-    margin-top: 40px; /* ดันลงให้อยู่ระดับเดียวกับเนื้อหา */
+    margin-top: 40px; 
 }
 
-/* ปรับขนาดเล็กน้อย */
+
 .profile-image.sub-image img {
     width: 210px;
     height: auto;
     opacity: 0.95;
 }
 
-/* ================= GALLERY TITLE ================= */
+
 
 .gallery-title {
     font-family: 'Playfair Display', serif;
@@ -1191,10 +1191,10 @@ body {
 
 .gallery-title span {
     font-style: italic;
-    color: #dfb325; /* โทนเดียวกับ site-title */
+    color: #dfb325; 
 }
 
-/* เส้นบางๆ ใต้หัวข้อ */
+
 .gallery-title::after {
     content: "";
     display: block;
